@@ -1,0 +1,17 @@
+# Developer: Vishal Raj V, Senior Engineer
+from setuptools import setup, find_packages
+
+setup(
+    name='oh-my-gemini-cli',
+    version='0.1.0',
+    packages=find_packages(),
+    install_requires=[
+        'click',
+        'pyyaml'
+    ],
+    entry_points={
+        'console_scripts': [
+            'omg=oh_my_gemini_cli.cli:main',
+        ],
+    },
+)

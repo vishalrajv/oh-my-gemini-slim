@@ -1,0 +1,3 @@
+recursive-include oh_my_gemini_cli/agents *.md
+recursive-include oh_my_gemini_cli/skills *
+recursive-include oh_my_gemini_cli/hooks *.py
