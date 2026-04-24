@@ -18,3 +18,6 @@ This is NOT a runtime orchestrator. Gemini CLI naturally handles multi-agent orc
 - **Dependencies**: Native standard library + `click`. Keep it lean.
 - **Agent Prompts**: If editing an agent's prompt, modify the source `.md` file inside `oh_my_gemini_cli/agents/` and then run `omg init` to deploy it.
 - **Memory Logging**: HARD RULE. At the end of every significant session or task, you MUST generate or append a Markdown log inside the `memory/` folder detailing what was changed and why. Future sessions rely on this folder for context.
+
+## Recent Fixes
+- **Agent Loading Errors**: Fixed outdated OpenCode tool names in agent templates to match valid Gemini CLI tools. See memory/02_agent_loading_fix.md for details.

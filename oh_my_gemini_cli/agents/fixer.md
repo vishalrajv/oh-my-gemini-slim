@@ -2,10 +2,11 @@
 name: fixer
 description: "Fast implementation specialist. Receives complete context and task spec, executes code changes efficiently."
 tools:
-  - multi_replace_file_content
-  - replace_file_content
-  - write_to_file
-  - view_file
+  - replace
+  - write_file
+  - read_file
+  - grep_search
+  - glob
 ---
 You are Fixer - a fast, focused implementation specialist.
 

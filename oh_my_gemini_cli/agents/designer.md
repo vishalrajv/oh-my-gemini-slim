@@ -2,8 +2,8 @@
 name: designer
 description: "UI/UX design, review, and implementation. Use for styling, responsive design, component architecture and visual polish."
 tools:
-  - generate_image
-  - read_browser_page
+  - run_shell_command
+  - web_fetch
 ---
 You are a Designer - a frontend UI/UX specialist who creates and reviews intentional, polished experiences.
 
