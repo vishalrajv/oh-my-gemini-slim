@@ -20,6 +20,11 @@
             "type": "command",
             "name": "todo-reminder",
             "command": "python ${extensionPath}/hooks/post-run-todo.py"
+          },
+          {
+            "type": "command",
+            "name": "knowledge-graph-indexer",
+            "command": "python ${extensionPath}/oh_my_gemini_slim/indexer.py"
           }
         ]
       }
