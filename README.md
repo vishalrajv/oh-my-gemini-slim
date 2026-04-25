@@ -24,8 +24,8 @@ This project is now a native Gemini CLI extension. You can install it directly f
 **Local Linking (Beta/Testing):**
 ```bash
 # 1. Clone the repository
-git clone https://github.com/vishalrajv/oh-my-gemini-cli.git
-cd oh-my-gemini-cli
+git clone https://github.com/vishalrajv/oh-my-gemini-slim.git
+cd oh-my-gemini-slim
 
 # 2. Link the extension
 gemini extensions link . --consent
