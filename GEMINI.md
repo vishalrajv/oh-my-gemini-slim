@@ -20,6 +20,7 @@ This is NOT a runtime orchestrator. Gemini CLI naturally handles multi-agent orc
 
 ## Mandatory Workflow Rules
 - **Memory Logging**: HARD RULE. At the end of every significant session or task, you MUST activate the `memory-logging` skill and generate or append a Markdown log inside the `memory/` folder.
+- **Contextual Recall**: You can "remember" project history by using the `memory-query` skill. Use it to find who changed a file, why a decision was made, or search for past session topics.
 - **PowerShell Safety**: You are working in a Windows PowerShell environment. **NEVER use `&&`** to concatenate commands. **ALWAYS use `;`** as the statement separator.
 
 ## Recent Fixes

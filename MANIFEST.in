@@ -1,5 +1,6 @@
 recursive-include agents *.md
 recursive-include skills *
 recursive-include hooks *.py
+recursive-include oh_my_gemini_slim *.py
 include gemini-extension.json
 include hooks/hooks.json
