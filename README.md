@@ -31,6 +31,11 @@ cd oh-my-gemini-slim
 gemini extensions link . --consent
 ```
 
+**Direct Installation from GitHub:**
+```bash
+gemini extensions install vishalrajv/oh-my-gemini-slim --consent
+```
+
 **Marketplace Installation:**
 Once published, you can install it using:
 ```bash
