@@ -3,6 +3,11 @@
   "version": "0.2.0",
   "description": "A lightweight agent orchestration plugin for Gemini CLI. Provides the Pantheon of expert subagents and codebase mapping skills.",
   "author": "Vishal Raj V",
+  "skills": [
+    "skills/memory-logging",
+    "skills/codemap",
+    "skills/simplify"
+  ],
   "mcpServers": {
     "context7": {
       "command": "npx",
