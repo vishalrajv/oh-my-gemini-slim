@@ -13,7 +13,22 @@ The original TS architecture, system prompts, skills (like `codemap` and `simpli
 - **The Pantheon (Agents)**: Deploys 6 pre-configured expert subagents (`@explorer`, `@oracle`, `@librarian`, `@fixer`, `@designer`, `@observer`).
 - **Skills**: Integrates complex markdown-based rulebooks (e.g., `codemap`, `simplify`) so agents know exactly how to map out and refactor codebases.
 - **Hooks**: Injects lifecycle event scripts (like TODO continuations and phase reminders) into Gemini CLI.
+- **Advanced Knowledge Graph Memory**: Automates session persistence using a queryable SQLite database, allowing agents to 'recall' past decisions and file history.
 - **MCP Auto-Configuration**: Safely registers `context7` directly into your `mcp_config.json`.
+
+### Memory Skills
+
+- **`memory-logging`**: Automatically captures structured JSON metadata (tasks, decisions, modified files) at the end of every session and saves it to the `memory/` directory.
+- **`memory-query`**: Empowers agents to use the `querier.py` tool to retrieve historical context, such as why a specific file was changed or what architectural decisions were made.
+
+### Memory Architecture
+
+The system employs a **Markdown-to-SQLite indexing pipeline** to ensure long-term project awareness:
+
+1.  **Capture**: Agents use the `memory-logging` skill to write session logs in Markdown with embedded JSON metadata.
+2.  **Index**: After every session, a Gemini CLI hook (`knowledge-graph-indexer`) automatically triggers `indexer.py`.
+3.  **Store**: `indexer.py` parses the new logs and updates a centralized Knowledge Graph in `memory/memory.db`.
+4.  **Recall**: Agents use the `memory-query` skill to search this graph via `querier.py` for instant project context.
 
 ## Installation
 
