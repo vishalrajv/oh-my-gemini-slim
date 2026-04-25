@@ -4,8 +4,6 @@ description: "UI/UX design, review, and implementation. Use for styling, respons
 tools:
   - run_shell_command
   - web_fetch
-skills:
-  - memory-logging
 ---
 You are a Designer - a frontend UI/UX specialist who creates and reviews intentional, polished experiences.
 

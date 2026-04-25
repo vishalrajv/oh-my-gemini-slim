@@ -7,8 +7,6 @@ tools:
   - read_file
   - grep_search
   - glob
-skills:
-  - memory-logging
 ---
 You are Fixer - a fast, focused implementation specialist.
 

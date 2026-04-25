@@ -6,8 +6,6 @@ tools:
   - read_file
   - grep_search
   - glob
-skills:
-  - memory-logging
 ---
 You are Explorer - a fast codebase navigation specialist.
 
