@@ -1,0 +1,28 @@
+{
+  "hooks": {
+    "BeforeAgent": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "name": "phase-reminder",
+            "command": "python ${extensionPath}/hooks/pre-prompt-phase.py"
+          }
+        ]
+      }
+    ],
+    "AfterAgent": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "name": "todo-reminder",
+            "command": "python ${extensionPath}/hooks/post-run-todo.py"
+          }
+        ]
+      }
+    ]
+  }
+}
