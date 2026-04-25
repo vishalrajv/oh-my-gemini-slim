@@ -44,8 +44,27 @@ Explain WHY these changes were made and any technical trade-offs considered.
 ## Verification
 List the commands or tests run to prove the changes work.
 
-## Next Steps (Optional)
-List any remaining tasks or follow-up items.
+## Metadata (Mandatory for Knowledge Graph)
+Add this JSON block at the very end of the file. It is used by the system to build a structured graph of project history.
+
+```json
+{
+  "session_id": "NN",
+  "title": "[Descriptive Title]",
+  "date": "YYYY-MM-DD",
+  "agent": "[Agent Name]",
+  "nodes": [
+    {"id": "task_id", "type": "Task", "label": "Short description"},
+    {"id": "file_path", "type": "File", "label": "filename"},
+    {"id": "decision_id", "type": "Decision", "label": "The decision"}
+  ],
+  "edges": [
+    {"from": "session_id", "to": "task_id", "type": "EXECUTED"},
+    {"from": "task_id", "to": "file_path", "type": "MODIFIED"},
+    {"from": "decision_id", "to": "task_id", "type": "RATIONALE_FOR"}
+  ]
+}
+```
 ```
 
 ## PowerShell Constraint

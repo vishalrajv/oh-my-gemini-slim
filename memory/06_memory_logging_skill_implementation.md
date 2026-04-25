@@ -21,3 +21,27 @@ To ensure the multi-agent ecosystem maintains a consistent "long-term memory" ac
 ## Next Steps
 - Link the updated extension locally: `gemini extensions link . --consent`
 - Periodically verify that agents are correctly following the naming convention `NN_descriptive_name.md`.
+
+## Metadata (Mandatory for Knowledge Graph)
+Add this JSON block at the very end of the file. It is used by the system to build a structured graph of project history.
+
+```json
+{
+  "session_id": "06",
+  "title": "Memory Logging Skill Implementation",
+  "date": "2026-04-25",
+  "agent": "Gemini CLI",
+  "nodes": [
+    {"id": "create_skill_task", "type": "Task", "label": "Create memory-logging skill"},
+    {"id": "skill_md", "type": "File", "label": "skills/memory-logging/SKILL.md"},
+    {"id": "extension_json", "type": "File", "label": "gemini-extension.json"},
+    {"id": "gemini_md", "type": "File", "label": "GEMINI.md"}
+  ],
+  "edges": [
+    {"from": "06", "to": "create_skill_task", "type": "EXECUTED"},
+    {"from": "create_skill_task", "to": "skill_md", "type": "CREATED"},
+    {"from": "create_skill_task", "to": "extension_json", "type": "MODIFIED"},
+    {"from": "create_skill_task", "to": "gemini_md", "type": "MODIFIED"}
+  ]
+}
+```
