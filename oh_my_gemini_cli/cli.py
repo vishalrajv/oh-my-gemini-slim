@@ -43,7 +43,7 @@ def init():
     # 1. Install Agents
     gemini_agents_dir = gemini_base / "agents"
     gemini_agents_dir.mkdir(parents=True, exist_ok=True)
-    source_agents_dir = Path(__file__).parent / "agents"
+    source_agents_dir = Path(__file__).parent.parent / "agents"
     
     click.echo(f"\nInstalling subagents into {gemini_agents_dir}...")
     for md_file in source_agents_dir.glob("*.md"):
@@ -53,7 +53,7 @@ def init():
     # 2. Install Skills
     gemini_skills_dir = agents_base / "skills"
     gemini_skills_dir.mkdir(parents=True, exist_ok=True)
-    source_skills_dir = Path(__file__).parent / "skills"
+    source_skills_dir = Path(__file__).parent.parent / "skills"
     
     click.echo(f"\nInstalling skills into {gemini_skills_dir}...")
     if source_skills_dir.exists():
@@ -68,7 +68,7 @@ def init():
     # 3. Install Hooks
     gemini_hooks_dir = gemini_base / "hooks"
     gemini_hooks_dir.mkdir(parents=True, exist_ok=True)
-    source_hooks_dir = Path(__file__).parent / "hooks"
+    source_hooks_dir = Path(__file__).parent.parent / "hooks"
     
     click.echo(f"\nInstalling hooks into {gemini_hooks_dir}...")
     if source_hooks_dir.exists():

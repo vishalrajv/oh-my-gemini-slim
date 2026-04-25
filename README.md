@@ -17,21 +17,39 @@ The original TS architecture, system prompts, skills (like `codemap` and `simpli
 
 ## Installation
 
-**Note:** This package is not published on the official PyPI registry. To install it, you must clone this repository and install it locally on your machine.
+### Method 1: Native Gemini CLI Extension (Recommended)
 
+This project is now a native Gemini CLI extension. You can install it directly from the marketplace or link it locally for development.
+
+**Local Linking (Beta/Testing):**
 ```bash
-# 1. Clone the repository and enter the directory
+# 1. Clone the repository
 git clone https://github.com/vishalrajv/oh-my-gemini-cli.git
 cd oh-my-gemini-cli
 
-# 2. Install the CLI package locally in editable mode
+# 2. Link the extension
+gemini extensions link . --consent
+```
+
+**Marketplace Installation:**
+Once published, you can install it using:
+```bash
+gemini extensions install oh-my-gemini-slim
+```
+
+### Method 2: Python CLI Installer (Backup/Fallback)
+
+If you prefer the classic installation method, you can still use the `omg` tool.
+
+```bash
+# 1. Install the CLI package locally in editable mode
 pip install -e .
 
-# 3. Deploy the ecosystem
+# 2. Deploy the ecosystem
 omg init
 ```
 
-During initialization, you can choose to deploy **Globally** (`~/.gemini/`) or **Locally** to the current directory (`./.gemini/`).
+During initialization, you can choose to deploy **Globally** (`~/.gemini/`) or **Local** to the current directory (`./.gemini/`).
 
 ## Usage
 
