@@ -28,12 +28,12 @@ def ask_mode(action="Installation"):
 
 @click.group()
 def main():
-    """oh-my-gemini-cli: A toolkit for Gemini CLI subagents."""
+    """oh-my-gemini-slim: A toolkit for Gemini CLI subagents."""
     pass
 
 @main.command()
 def init():
-    """Initialize the oh-my-gemini-cli ecosystem."""
+    """Initialize the oh-my-gemini-slim ecosystem."""
     mode = ask_mode("Installation")
     is_global = mode == 'global'
     

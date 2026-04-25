@@ -1,12 +1,12 @@
-# oh-my-gemini-cli
+# oh-my-gemini-slim
 
-`oh-my-gemini-cli` is a Python-based utility that bootstraps a powerful, multi-agent ecosystem directly into your Gemini CLI environment. It deploys pre-configured expert subagents, complex codebase skills, lifecycle hooks, and MCP servers seamlessly.
+`oh-my-gemini-slim` is a Python-based utility that bootstraps a powerful, multi-agent ecosystem directly into your Gemini CLI environment. It deploys pre-configured expert subagents, complex codebase skills, lifecycle hooks, and MCP servers seamlessly.
 
 ## Acknowledgements & Credits
 
 **This project is a direct Python fork and port of the original [oh-my-opencode-slim](https://github.com/alvinunreal/oh-my-opencode-slim) by alvinunreal.** 
 
-The original TS architecture, system prompts, skills (like `codemap` and `simplify`), and overarching agent logic (The Pantheon) were conceived by the OpenCode authors. `oh-my-gemini-cli` simply bridges that brilliance natively into the Python/Gemini CLI ecosystem.
+The original TS architecture, system prompts, skills (like `codemap` and `simplify`), and overarching agent logic (The Pantheon) were conceived by the OpenCode authors. `oh-my-gemini-slim` simply bridges that brilliance natively into the Python/Gemini CLI ecosystem.
 
 ## Features
 

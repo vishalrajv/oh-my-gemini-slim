@@ -1,16 +1,16 @@
-# Developer Context: oh-my-gemini-cli
+# Developer Context: oh-my-gemini-slim
 
 **Project Purpose:**
-`oh-my-gemini-cli` is a Python-based utility (`omg` command) designed to bootstrap a powerful, multi-agent ecosystem directly into a developer's Gemini CLI environment. This project is a direct fork and Python port of the original `oh-my-opencode-slim` architecture.
+`oh-my-gemini-slim` is a Python-based utility (`omg` command) designed to bootstrap a powerful, multi-agent ecosystem directly into a developer's Gemini CLI environment. This project is a direct fork and Python port of the original `oh-my-opencode-slim` architecture.
 
 ## Architectural Setup
 This is NOT a runtime orchestrator. Gemini CLI naturally handles multi-agent orchestration via its native `.md` template routing. This project acts purely as a **deployment engine**.
 
 **Core Directories to Know:**
-- `oh_my_gemini_cli/agents/`: Contains the Markdown templates (`oracle.md`, `explorer.md`, etc.) defining the personalities and strict behaviors of specialized subagents.
-- `oh_my_gemini_cli/skills/`: Contains the Markdown and Javascript files for complex agent abilities (like `codemap` and `simplify`).
-- `oh_my_gemini_cli/hooks/`: Contains executable Python scripts (`pre-prompt`, `post-run`) that enforce system rules during a Gemini CLI session.
-- `oh_my_gemini_cli/cli.py`: The heart of the installer. It securely copies the above assets into the user's `~/.gemini/` (Global) or `./.gemini/` (Local) directories based on user input.
+- `agents/`: Contains the Markdown templates (`oracle.md`, `explorer.md`, etc.) defining the personalities and strict behaviors of specialized subagents.
+- `skills/`: Contains the Markdown and Javascript files for complex agent abilities (like `codemap` and `simplify`).
+- `hooks/`: Contains executable Python scripts (`pre-prompt`, `post-run`) that enforce system rules during a Gemini CLI session.
+- `oh_my_gemini_slim/cli.py`: The heart of the installer. It securely copies the above assets into the user's `~/.gemini/` (Global) or `./.gemini/` (Local) directories based on user input.
 
 ## Developer Rules
 - **Python**: Uses `click` for CLI argument parsing.

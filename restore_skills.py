@@ -4,7 +4,7 @@ from pathlib import Path
 
 def restore_skills():
     source_base = Path("oh-my-opencode-slim/src/skills")
-    target_base = Path("oh_my_gemini_cli/skills")
+    target_base = Path("oh_my_gemini_slim/skills")
 
     files_to_restore = [
         "codemap/SKILL.md",
